@@ -12,7 +12,8 @@
     "plugin:react/recommended",
     "airbnb",
     "plugin:@typescript-eslint/recommended",
-    "plugin:react/jsx-runtime"
+    "plugin:react/jsx-runtime",
+    "plugin:storybook/recommended"
   ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
@@ -40,6 +41,13 @@
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",
     "import/prefer-default-export": "off",
-    "react/prop-types": "off"
+    "react/prop-types": "off",
+    "storybook/hierarchy-separator": "error",
+    "storybook/default-exports": "off",
+    "react/function-component-definition": "off",
+    "react/jsx-props-no-spreading": "off",
+    "react/require-default-props": "off",
+    "semi": "off",
+    "arrow-parens": "off"
   }
 }
