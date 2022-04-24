@@ -1,8 +1,9 @@
+import React from 'react'
 import { Link } from 'react-router-dom'
 
 import { Organization } from 'src/types'
 
-import { Card } from 'src/components'
+import { Card } from '../Card/Card'
 
 type ListProps = {
   orgs: Organization[]

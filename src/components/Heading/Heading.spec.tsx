@@ -1,11 +1,12 @@
-import { render } from '@testing-library/react'
+import React from 'react'
+import { render, screen } from '@testing-library/react'
 
 import { Heading } from './Heading'
 
 describe('Heading component', () => {
-  it('Should be render the component', () => {
-    const { getByTestId } = render(<Heading title="Organizations" />)
+  it('should render the heading', () => {
+    render(<Heading title="Organizations" />)
 
-    expect(getByTestId('Heading')).toBeTruthy()
+    expect(screen.getByText('Organizations')).toBeInTheDocument()
   })
 })
