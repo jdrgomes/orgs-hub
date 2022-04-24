@@ -1,10 +1,12 @@
 import styled from 'styled-components'
 
 export const Title = styled.h1`
-  font-size: 2rem;
-  font-weight: 800;
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 600;
 `
 
 export const Description = styled.p`
-  margin-top: 1rem;
+  margin: 0.5rem 0;
+  font-size: 1rem;
 `

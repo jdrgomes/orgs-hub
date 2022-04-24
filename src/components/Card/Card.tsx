@@ -1,17 +1,28 @@
+import {
+  CardWrapper,
+  Avatar,
+  CardInfos,
+  CardTitle,
+  CardDescription,
+} from './style'
+
 type CardProps = {
   user: string
-  avatar: string
+  avatar?: string
   description?: string
 }
 
 export function Card({ user, avatar, description }: CardProps) {
   return (
-    <div>
-      <img src={avatar} alt="Organization avatar" />
+    <CardWrapper>
       <div>
-        <h1>{user}</h1>
-        <p>{description}</p>
+        <Avatar src={avatar} alt="Organization avatar" />
       </div>
-    </div>
+
+      <CardInfos>
+        <CardTitle>{user}</CardTitle>
+        <CardDescription>{description || 'no description'}</CardDescription>
+      </CardInfos>
+    </CardWrapper>
   )
 }
