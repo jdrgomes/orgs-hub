@@ -1,13 +1,27 @@
 const baseUrl = 'https://api.github.com'
 
 export async function getAllOrgs() {
-  const response = await fetch(`${baseUrl}/organizations`)
+  let data
+  try {
+    const response = await fetch(`${baseUrl}/organizations`)
 
-  if (response.status !== 200) {
-    throw new Error('cannot fetch data')
+    data = await response.json()
+  } catch (err) {
+    console.error(err)
   }
 
-  const data = await response.json()
+  return data
+}
+
+export async function getOrgDetail(orgName: string) {
+  let data
+  try {
+    const response = await fetch(`${baseUrl}/orgs/${orgName}`)
+
+    data = await response.json()
+  } catch (err) {
+    console.error(err)
+  }
 
   return data
 }
