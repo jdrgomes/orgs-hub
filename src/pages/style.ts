@@ -1,5 +1,38 @@
 import styled from 'styled-components'
 
+export const HomeWrapper = styled.main`
+  background-color: #f6f8fa;
+  height: 100%;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+`
+
+export const Title = styled.h1`
+  font-size: 40px;
+  font-weight: bold;
+  background: -webkit-linear-gradient(-70deg, #9867f0 0%, #ed4e50 100%);
+  background-clip: border-box;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: 'Source Sans Pro';
+  margin: 0;
+
+  @media screen and (min-width: 768px) {
+    font-size: 64px;
+  }
+`
+
+export const Description = styled.h2`
+  max-width: 47.25rem;
+  font-size: 20px;
+  font-weight: normal;
+  line-height: 32px;
+  color: #66717f;
+  margin-top: 2rem;
+`
+
 export const Grid = styled.div`
   display: grid;
   grid-template-columns: 1fr;

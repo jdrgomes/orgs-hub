@@ -2,19 +2,30 @@ import { Container, Heading, List } from 'src/components'
 
 import { useOrgs } from 'src/hooks'
 
+import { HomeWrapper, Title, Description } from './style'
+
 export function Home() {
   const { orgs, loading } = useOrgs()
 
   return (
-    <Container>
+    <main>
       {loading ? (
         'loading...'
       ) : (
         <>
-          <Heading title="Organizations" description="lorem ipsum" />
-          <List orgs={orgs} />
+          <HomeWrapper>
+            <Title>Organizations</Title>
+            <Description>
+              are shared accounts where businesses and open-source projects can
+              collaborate across many projects at once.
+            </Description>
+          </HomeWrapper>
+
+          <Container>
+            <List orgs={orgs} />
+          </Container>
         </>
       )}
-    </Container>
+    </main>
   )
 }
