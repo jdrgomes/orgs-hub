@@ -17,7 +17,11 @@ export function List({ orgs }: ListProps) {
   return (
     <Grid>
       {sortOrgs(orgs).map((org: Organization) => (
-        <Link to={`detail/${org.login}`} key={org.id}>
+        <Link
+          to={`detail/${org.login}`}
+          key={org.id}
+          style={{ textDecoration: 'none' }}
+        >
           <Card
             user={org.login}
             avatar={org.avatar_url}
