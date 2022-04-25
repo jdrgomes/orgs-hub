@@ -37,7 +37,7 @@ export const RepoDescription = styled.p`
   color: #57606a;
 `
 
-export const RepoFooter = styled.p`
+export const RepoFooter = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
