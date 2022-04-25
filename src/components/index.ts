@@ -1,6 +1,6 @@
 export { Button } from './Button'
 export { Card } from './Card'
+export { CardRepository } from './CardRepository'
 export { Container } from './Container'
 export { Heading } from './Heading'
 export { List } from './List'
-export { OrgHeader } from './OrgHeader'
