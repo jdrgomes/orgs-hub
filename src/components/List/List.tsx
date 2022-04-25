@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 import { Organization } from 'src/types'
 
-import { Grid } from 'src/pages/style'
+import { Grid } from '../../pages/style'
 import { Card } from '../Card/Card'
 
 type ListProps = {
