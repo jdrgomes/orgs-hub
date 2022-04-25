@@ -1,2 +1,2 @@
 export { Home } from './Home'
-export { OrgDetail } from './OrgDetail'
+export { Detail } from './Detail'

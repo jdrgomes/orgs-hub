@@ -1,22 +1,21 @@
 import { useParams } from 'react-router-dom'
-import { Container, Heading } from 'src/components'
+
+import { OrgHeader } from 'src/components'
 
 import { useOrgsDetails } from 'src/hooks'
+import { OrgDetail } from 'src/types'
 
-export function OrgDetail() {
+export function Detail() {
   const { org = '' } = useParams()
   const { orgsDetails, loading } = useOrgsDetails(org)
 
   return (
-    <Container>
+    <div>
       {loading ? (
         'loading...'
       ) : (
-        <>
-          <Heading title="Organization Detail" />
-          <div>assdsd</div>
-        </>
+        <OrgHeader orgsDetails={orgsDetails as OrgDetail} />
       )}
-    </Container>
+    </div>
   )
 }
