@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 
-import { getAllOrgs, getOrgDetail } from 'src/services'
-import { Organization, OrgDetail } from 'src/types'
+import { getAllOrgs, getOrgDetail, getOrgRepositories } from 'src/services'
+import { Organization, OrgDetail, OrgRepo } from 'src/types'
 
 export function useOrgs() {
   const [orgs, setOrgs] = useState<Organization[]>([])
@@ -47,6 +47,30 @@ export function useOrgsDetails(orgName: string) {
 
   return {
     orgsDetails,
+    loading,
+  }
+}
+
+export function useOrgsRepositories(orgName: string) {
+  const [orgsRepositories, setOrgsRepositories] = useState<OrgRepo[]>([])
+  const [loading, setLoading] = useState(false)
+
+  useEffect(() => {
+    setLoading(true)
+
+    getOrgRepositories(orgName)
+      .then(data => {
+        setOrgsRepositories(data)
+        setLoading(false)
+      })
+      .catch(err => {
+        console.error(err.message)
+        setLoading(false)
+      })
+  }, [orgName])
+
+  return {
+    orgsRepositories,
     loading,
   }
 }

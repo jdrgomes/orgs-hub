@@ -25,3 +25,16 @@ export async function getOrgDetail(orgName: string) {
 
   return data
 }
+
+export async function getOrgRepositories(orgName: string) {
+  let data
+  try {
+    const response = await fetch(`${baseUrl}/orgs/${orgName}/repos`)
+
+    data = await response.json()
+  } catch (err) {
+    console.error(err)
+  }
+
+  return data
+}
