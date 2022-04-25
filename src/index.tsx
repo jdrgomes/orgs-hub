@@ -7,7 +7,7 @@ import App from './App'
 
 const GlobalStyle = createGlobalStyle`
   body {
-    font-family: "Roboto","Helvetica","Arial",sans-serif;
+    font-family: 'Source Sans Pro', 'Helvetica', 'Arial', sans-serif;
     margin: 0;
     padding: 0;
   }
