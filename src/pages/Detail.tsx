@@ -2,6 +2,7 @@ import { useParams } from 'react-router-dom'
 
 import { useOrgsDetails, useOrgsRepositories } from 'src/hooks'
 import { OrgDetail, OrgRepo } from 'src/types'
+import { Loading } from 'src/components'
 
 import { DetailHeader } from './partials/DetailHeader'
 
@@ -15,7 +16,7 @@ export function Detail() {
   return (
     <div>
       {loading || reposLoading ? (
-        'loading...'
+        <Loading />
       ) : (
         <>
           <DetailHeader orgsDetails={orgsDetails as OrgDetail} />

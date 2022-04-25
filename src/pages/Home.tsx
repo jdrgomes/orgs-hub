@@ -1,4 +1,4 @@
-import { Container, Heading, List } from 'src/components'
+import { Container, Loading, List } from 'src/components'
 
 import { useOrgs } from 'src/hooks'
 
@@ -10,7 +10,7 @@ export function Home() {
   return (
     <main>
       {loading ? (
-        'loading...'
+        <Loading />
       ) : (
         <>
           <HomeWrapper>
